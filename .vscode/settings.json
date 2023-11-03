@@ -1,0 +1,10 @@
+{
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "python.testing.pytestArgs": [
+    "."
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "parquet-viewer.backend": "parquets"
+}

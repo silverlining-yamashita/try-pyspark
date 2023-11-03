@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "bierner.markdown-mermaid",
+    "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+    "vscode-icons-team.vscode-icons",
+    "irongeek.vscode-env",
+    "ms-python.python",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "dvirtz.parquet-viewer",
+    "mhutchie.git-graph",
+    "eriklynd.json-tools",
+    "ms-toolsai.jupyter"
+  ]
+}
