@@ -31,7 +31,9 @@
 				"dvirtz.parquet-viewer",
 				"mhutchie.git-graph",
 				"eriklynd.json-tools",
-				"ms-toolsai.jupyter"
+				"ms-toolsai.jupyter",
+				"mechatroner.rainbow-csv",
+				"janisdd.vscode-edit-csv"
 			]
 		}
 	}

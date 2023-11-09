@@ -10,9 +10,93 @@ I hope you can use it as a Pyspark (Jupyter Notebook) learning environment.
 ![100](./images/100.gif)
 
 ## localhost上での結果出力イメージ
-[localhost:4040](http://localhost:4040)
+[localhost:4040](http://localhost:4040)<br>
 ![101](./images/101.gif)
 
+# ディレクトリ構成
+```
+.
+├── LICENSE
+├── README.md
+├── csv                                    サンプルデータ格納場所
+├── images                                 README用のイメージファイル
+├── json                                   サンプルデータ格納場所
+├── nb_csv_products_upsert.ipynb           UPSERTサンプル
+├── nb_csv_vehicles_add_deleteflg.ipynb    物理削除&delete_flog付与サンプル
+├── nb_csv_vehicles_phisical_delete.ipynb  物理削除サンプル
+├── nb_json_flatten_customers.ipynb        json展開サンプル
+├── nb_json_noflatten_customers.ipynb      jsonサンプル
+├── packages                               Pyspark用自作モジュール
+│   └── modules.py
+└── tables                                 Delta tables
+    ├── customers_flatten                  jsonのflattenしたデータをDelta tableにINSERTするサンプル
+    │   ├── _delta_log
+    │   │   ├── 00000000000000000000.json
+    │   │   └── 00000000000000000001.json
+    │   ├── address_state=三重県
+    │   │   ├── part-hoge.snappy.parquet
+    │   │   └── part-hoge.snappy.parquet
+    │   └── ...
+    ├── customers_noflatten                jsonデータをDelta tableにINSERTするサンプル
+    │   ├── _delta_log
+    │   │   ├── 00000000000000000000.json
+    │   │   └── 00000000000000000001.json
+    │   ├── zodiacSign=Aquarius
+    │   │   ├── part-hoge.snappy.parquet
+    │   │   └── part-hoge.snappy.parquet
+    │   └── ...
+    ├── products                           UPSERTのサンプル
+    │   ├── _delta_log
+    │   │   ├── 00000000000000000000.json
+    │   │   └── 00000000000000000001.json
+    │   ├── kind=Electronic
+    │   │   ├── part-hoge.snappy.parquet
+    │   │   └── part-hoge.snappy.parquet
+    │   └── ...
+    ├── products_tmp                       UPSERT用の一時テーブルサンプル
+    │   ├── _delta_log
+    │   │   ├── 00000000000000000000.json
+    │   │   └── 00000000000000000001.json
+    │   ├── kind=Electronic
+    │   │   └── part-hoge.snappy.parquet
+    │   └── kind=Unbranded
+    │       └── part-hoge.snappy.parquet
+    ├── vehicles                           ソースデータに存在しないレコードを物理削除するサンプル
+    │   ├── _delta_log
+    │   │   ├── 00000000000000000000.json
+    │   │   └── 00000000000000000001.json
+    │   ├── type=Coupe
+    │   │   ├── part-hoge.snappy.parquet
+    │   │   └── part-hoge.snappy.parquet
+    │   └── ...
+    ├── vehicles_add_deleteflg             ソースデータに存在しないレコードをdelete_flgを付与し論理削除するサンプル
+    │   ├── _delta_log
+    │   │   ├── 00000000000000000000.json
+    │   │   └── 00000000000000000001.json
+    │   ├── type=Coupe
+    │   │   ├── part-hoge.snappy.parquet
+    │   │   └── part-hoge.snappy.parquet
+    │   └── ...
+    ├── vehicles_add_deleteflg_tmp         ソースデータに存在しないレコードをdelete_flgを付与し論理削除する一時テーブルサンプル
+    │   ├── _delta_log
+    │   │   ├── 00000000000000000000.json
+    │   │   └── 00000000000000000001.json
+    │   ├── type=Coupe
+    │   │   ├── part-hoge.snappy.parquet
+    │   │   └── part-hoge.snappy.parquet
+    │   └── ...
+    └── vehicles_tmp                       ソースデータに存在しないレコードを物理削除する一時テーブルサンプル
+        ├── _delta_log
+        │   └── 00000000000000000000.json
+        ├── type=1
+        │   └── part-hoge.snappy.parquet
+        ├── type=Coupe
+        │   └── part-hoge.snappy.parquet
+        ├── type=Hatchback
+        │   └── part-hoge.snappy.parquet
+        └── type=Wagon
+            └── part-hoge.snappy.parquet
+```
 
 # 環境構築について About environment construction
 Devcontainerで環境構築を行なった<br>
@@ -106,6 +190,17 @@ Check the logs and the errors.
 2. 「リモート接続を終了する」を押下する<br>Close Remote connection
 
 # 注意事項
+## 一時テーブルについて
+アンマネージドテーブルはデータの物理削除ができない<br>
+マネージドテーブルはデータの物理削除ができる<br>
+※参考情報は下記参照<br>
+Unmanaged tables cannot physically delete data<br>
+Managed tables allow physical deletion of data<br>
+※See below for reference information
+
+- [Table deletes, updates, and merges](https://docs.delta.io/latest/delta-update.html)
+- [Remove files no longer referenced by a Delta table](https://docs.delta.io/latest/delta-utility.html#-delta-vacuum)
+
 ## テストデータについて
 [./json](./json/)配下にあるデータはテストデータで[Faker](https://fakerjs.dev/guide/)で作成したもので、人物の情報は全て架空である<br>
 <br>

@@ -1,0 +1,11 @@
+id,vin,name,manufacturer,type,model,fuel,color,description
+1,WDR5FBN83YTF11274,Audi A8,Dodge,Wagon,Prius,Electric,tan,still
+2,E66LYTEHD8EM39881,Maserati Alpine,Mazda,Coupe,Sentra,Gasoline,white,still
+3,SM5T15RCMUX914093,Porsche Volt,Lamborghini,Coupe,Element,Hybrid,blue,still
+4,APWJUTZNJ1ST99631,Porsche Beetle,Honda,Crew Cab Pickup,Model 3,Hybrid,orchid,delete
+5,K7K9L4AE3MLA82628,Lamborghini Challenger,Mazda,Hatchback,XC90,Diesel,blue,update
+6,AW2B2LL9VLWJ86253,Kia Volt,Jeep,Minivan,Mustang,Hybrid,pink,delete
+7,UJSYPGEKULZE52088,Kia Golf,Ford,Minivan,LeBaron,Hybrid,silver,update
+8,W02HDVA34UPF70822,Ford Challenger,Polestar,Hatchback,Mercielago,Electric,orchid,delete
+9,GUC81JZZX1NB46693,Land Rover Grand Cherokee,Mini,Sedan,Grand Cherokee,Hybrid,grey,update
+10,46WJ12P00MHJ64331,BMW Altima,Mercedes Benz,Hatchback,Altima,Gasoline,orchid,delete

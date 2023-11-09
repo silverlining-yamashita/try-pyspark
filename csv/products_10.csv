@@ -1,0 +1,11 @@
+id,name,short_name,kind,material,price,description,delete_flg
+1,Fantastic Granite Pizza,Shoes,Small,Cotton,3067,nothing,0
+2,Rustic Soft Fish,Pants,Handmade,Steel,7107,nothing,0
+3,Licensed Cotton Hat,Sausages,Fantastic,Metal,9050,nothing,0
+4,Luxurious Bronze Towels,Chair,Intelligent,Plastic,4967,nothing,0
+5,Generic Wooden Towels,Mouse,Small,Metal,4428,still,0
+6,Handcrafted Cotton Sausages,Computer,Licensed,Plastic,5047,update,0
+7,Handmade Wooden Towels,Chips,Small,Steel,7796,update,0
+8,Licensed Metal Fish,Computer,Refined,Rubber,7437,delete_flg,0
+9,Electronic Concrete Chair,Cheese,Incredible,Metal,1062,delete_flg,0
+10,Incredible Metal Computer,Pants,Unbranded,Rubber,6368,delete_flg,0
