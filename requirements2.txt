@@ -1,2 +1,2 @@
 # install
-pystan
+pystan<=2.19.1.1
