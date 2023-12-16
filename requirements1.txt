@@ -13,7 +13,7 @@ hypothesis
 numpy
 convertdate
 lunarcalendar
-holidays==0.24
+holidays
 tqdm
 python-dateutil
 matplotlib
@@ -33,3 +33,11 @@ kaggle
 cmake
 wheel
 setuptools
+matplotlib
+japanize-matplotlib
+seaborn
+bokeh
+plotly
+pyright
+ipywidgets
+nbformat

@@ -1,0 +1,9 @@
+# install
+google-cloud-aiplatform
+langchain
+unstructured
+pdf2image
+pytesseract
+pdfminer.six
+tensorflow-hub
+tensorflow_text
